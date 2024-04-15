@@ -1,9 +1,11 @@
-function Homepage() {
+import HeroInfoBlock from "../components/HeroInfoBlock"
+
+function HomePage() {
     return (
-        <div>
-            
-        </div>
+        <>
+            <HeroInfoBlock/>
+        </>
     )
 }
 
-export default Homepage
+export default HomePage

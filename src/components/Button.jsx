@@ -1,11 +1,5 @@
-function Button({ children, rounded = "full", py = "2.5", px = "4" }) {
-  return (
-    <button
-      className={`border-primary border-2 rounded-${rounded} py-${py} px-${px} text-dark-200`}
-    >
-      {children}
-    </button>
-  );
+function Button({ children, styleClasses }) {
+  return <button className={styleClasses}>{children}</button>;
 }
 
 export default Button;

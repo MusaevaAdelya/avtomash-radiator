@@ -14,10 +14,10 @@ export default function Navbar() {
         className="mx-auto flex container items-center justify-between p-6 md:px-8 lg:max-w-[83rem]"
         aria-label="Global"
       >
-        <div className="flex  ">
+        <div className="flex ">
           <NavLink to="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img className="w-auto h-8" src="images/Logo.svg" alt="" />
+            <img className="w-auto h-8" src="/images/Logo.svg" alt="" />
           </NavLink>
         </div>
         <div className="flex lg:hidden">
@@ -69,14 +69,14 @@ export default function Navbar() {
             Продукты
           </NavLink>
         </Popover.Group>
-        <div className="hidden lg:flex  lg:justify-end lg:items-center ">
+        <div className="hidden lg:flex lg:justify-end lg:items-center ">
           <Link to="#" className="mr-2">
-            <img src="images/Whatsapp.svg" alt="instagram icon" />
+            <img src="/images/Whatsapp.svg" alt="instagram icon" />
           </Link>
           <Link to="#">
-            <img src="images/Instagram.svg" alt="instagram icon" />
+            <img src="/images/Instagram.svg" alt="instagram icon" />
           </Link>
-          <p className="border-r border-gray-300 h-5 mx-2"></p>
+          <p className="h-5 mx-2 border-r border-gray-300"></p>
           <button className="border-primary border-2 rounded-full py-2.5 px-4 text-dark-200">
             Заказать звонок
           </button>
@@ -93,7 +93,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             <NavLink to="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img className="w-auto h-8" src="images/Logo.svg" alt="" />
+              <img className="w-auto h-8" src="/images/Logo.svg" alt="" />
             </NavLink>
             <button
               type="button"
@@ -104,42 +104,42 @@ export default function Navbar() {
               <XMarkIcon className="w-6 h-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="flow-root mt-6 h-full">
-            <div className="-my-6 h-full flex flex-col justify-between">
+          <div className="flow-root h-full mt-6">
+            <div className="flex flex-col justify-between h-full -my-6">
               <div className="py-6 space-y-2 text-3xl">
                 <NavLink
                   to="#"
-                  className="block px-3 py-2 -mx-3  font-medium leading-7 text-dark-400 rounded-lg hover:bg-gray-50 "
+                  className="block px-3 py-2 -mx-3 font-medium leading-7 rounded-lg text-dark-400 hover:bg-gray-50 "
                 >
                   Про нас
                 </NavLink>
                 <NavLink
                   to="#"
-                  className="block px-3 py-2 -mx-3 font-medium leading-7 text-dark-400 rounded-lg hover:bg-gray-50"
+                  className="block px-3 py-2 -mx-3 font-medium leading-7 rounded-lg text-dark-400 hover:bg-gray-50"
                 >
                   Преимущества
                 </NavLink>
                 <NavLink
                   to="#"
-                  className="block px-3 py-2 -mx-3 font-medium leading-7 text-dark-400 rounded-lg hover:bg-gray-50"
+                  className="block px-3 py-2 -mx-3 font-medium leading-7 rounded-lg text-dark-400 hover:bg-gray-50"
                 >
                   Хиты продаж
                 </NavLink>
                 <NavLink
                   to="#"
-                  className="block px-3 py-2 -mx-3 font-medium leading-7 text-dark-400 rounded-lg hover:bg-gray-50"
+                  className="block px-3 py-2 -mx-3 font-medium leading-7 rounded-lg text-dark-400 hover:bg-gray-50"
                 >
                   Модельный ряд
                 </NavLink>
                 <NavLink
                   to="#"
-                  className="block px-3 py-2 -mx-3 font-medium leading-7 text-dark-400 rounded-lg hover:bg-gray-50"
+                  className="block px-3 py-2 -mx-3 font-medium leading-7 rounded-lg text-dark-400 hover:bg-gray-50"
                 >
                   Наши кейсы
                 </NavLink>
                 <NavLink
                   to="#"
-                  className="block px-3 py-2 -mx-3 font-medium leading-7 text-dark-400 rounded-lg hover:bg-gray-50"
+                  className="block px-3 py-2 -mx-3 font-medium leading-7 rounded-lg text-dark-400 hover:bg-gray-50"
                 >
                   Продукты
                 </NavLink>
@@ -147,16 +147,16 @@ export default function Navbar() {
               <div className="py-6 space-y-4">
                 <div className="flex items-center">
                   <Link to="#" className="mr-3">
-                    <img src="images/whatsapp-black.svg" alt="whatsapp icon" />
+                    <img src="/images/whatsapp-black.svg" alt="whatsapp icon" />
                   </Link>
                   <Link to="#">
                     <img
-                      src="images/instagram-black.svg"
+                      src="/images/instagram-black.svg"
                       alt="instagram icon"
                     />
                   </Link>
-                  <p className="border-r border-black h-7 mx-3"></p>
-                  <span className="text-dark-400 font-medium text-lg">
+                  <p className="mx-3 border-r border-black h-7"></p>
+                  <span className="text-lg font-medium text-dark-400">
                     +996 (997) 91-91-70
                   </span>
                 </div>

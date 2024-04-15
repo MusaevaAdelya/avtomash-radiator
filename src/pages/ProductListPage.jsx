@@ -1,9 +1,5 @@
-function ProductList() {
-    return (
-        <div>
-            
-        </div>
-    )
+function ProductListPage() {
+  return <div>catalog of products</div>;
 }
 
-export default ProductList
+export default ProductListPage;
