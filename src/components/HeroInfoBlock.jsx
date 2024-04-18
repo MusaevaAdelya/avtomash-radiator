@@ -2,8 +2,8 @@ import Button from "./Button";
 
 function HeroInfoBlock() {
   return (
-    <div className=" max-w-[691px] mx-auto flex flex-col items-center mt-14">
-      <h1 className="text-[56px] font-bold uppercase">АВТОМАШ-РАДИАТОР</h1>
+    <div className=" max-w-[691px] mx-auto flex flex-col items-center mt-14 mb-16">
+      <h1 className="text-[56px] font-bold uppercase text-center">АВТОМАШ-РАДИАТОР</h1>
       <p className="max-w-xl mt-2 font-medium text-center">
         Компания с многолетним опытом поставок специальной и
         сельскохозяйственной техники. Самый широкий ассортимент представленный
