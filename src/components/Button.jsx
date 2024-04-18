@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Button({ children, styleClasses, isLink=false, to }) {
   return (
     isLink ? (
-      <Link to={to} className={styleClasses}>
+      <Link to={to} className={`inline-block ${styleClasses}`}>
         {children}
       </Link>
     ) : (

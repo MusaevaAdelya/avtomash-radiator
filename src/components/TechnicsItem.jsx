@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from "./Button";
+import { ChevronRightIcon } from "@heroicons/react/16/solid";
 
 function TechnicsItem({ image, description, id }) {
   return (
@@ -20,13 +21,9 @@ function TechnicsItem({ image, description, id }) {
         </Link>
         <div className="flex justify-between">
           <p className="max-w-[293px]">{description}</p>
-          <Button styleClasses="mr-4  px-8 border border-white text-xl text-white font-medium rounded-full md:flex items-center hidden hover:bg-primary hover:border-primary transition ease-in-out duration-200" isLink={true} to={`/products/${id}`}>
+          <Button styleClasses="mr-4  px-8 border border-white text-xl text-white font-medium rounded-full md:flex items-center hidden hover:bg-primary hover:border-primary transition ease-in-out duration-200 self-center py-2.5" isLink={true} to={`/products/${id}`}>
             <span className="mr-2">Узнать подробнее</span>
-            <img
-              className="w-auto h-4"
-              src="/images/Arrow-white.svg"
-              alt="arrow"
-            />
+            <ChevronRightIcon className="w-auto h-8" aria-hidden="true"/>
           </Button>
         </div>
       </div>
