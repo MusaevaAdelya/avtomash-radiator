@@ -1,5 +1,17 @@
-function Button({ children, styleClasses }) {
-  return <button className={styleClasses}>{children}</button>;
+import { Link } from "react-router-dom";
+
+function Button({ children, styleClasses, isLink=false, to }) {
+  return (
+    isLink ? (
+      <Link to={to} className={styleClasses}>
+        {children}
+      </Link>
+    ) : (
+      <button className={styleClasses}>
+        {children}
+      </button>
+    )
+  );
 }
 
 export default Button;
