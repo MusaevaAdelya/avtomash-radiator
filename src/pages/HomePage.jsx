@@ -3,6 +3,7 @@ import HeroInfoBlock from "../components/HeroInfoBlock"
 import Technologies from "../components/Technologies"
 import Technics from "../components/Technics"
 import ProductsMain from "../components/ProductsMain"
+import AdditionalInfo from "../components/AdditionalInfo"
 
 function HomePage() {
     return (
@@ -12,6 +13,7 @@ function HomePage() {
             <Technologies/>
             <Technics/>
             <ProductsMain/>
+            <AdditionalInfo/>
         </>
     )
 }

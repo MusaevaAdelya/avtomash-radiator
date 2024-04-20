@@ -8,7 +8,7 @@ function TechnicsItem({ image, description, id }) {
       <img
         src={image}
         alt="tractor"
-        className="absolute object-cover w-full h-full transform -translate-x-1/2 -translate-y-1/2 -z-10 top top-1/2 left-1/2"
+        className="absolute object-cover w-full h-full transform -translate-x-1/2 -translate-y-1/2 -z-10 top-1/2 left-1/2"
       />
       <div className="flex flex-col justify-between flex-1 p-10 text-white bg-darken">
         <Link to={`/products/${id}`} className="flex items-center">
