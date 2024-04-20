@@ -7,7 +7,6 @@ function AppLayout() {
     <>
       <Navbar />
       <main className="min-h-screen mx-auto  container lg:max-w-7xl p-6 md:px-8">
-        hey
         <Outlet />
       </main>
       <Footer />
