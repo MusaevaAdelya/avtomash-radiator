@@ -1,4 +1,4 @@
-import Button from "./Button";
+import ApplicationButton from "./ApplicationButton";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 function LeavaApplication() {
@@ -14,10 +14,10 @@ function LeavaApplication() {
         Самый широкий ассортимент представленный на рынке Кыргызстана известных
         международных брендов.
       </p>
-      <Button styleClasses="flex items-center py-2.5 px-8 bg-primary text-lg text-white font-medium rounded-full">
+      <ApplicationButton formTitle="Отличный выбор! Оставьте номер для связи">
         <span className="whitespace-nowrap">Оставить заявку</span>
         <ChevronRightIcon className="w-6 h-6" aria-hidden="true" />
-      </Button>
+      </ApplicationButton>
     </div>
   );
 }

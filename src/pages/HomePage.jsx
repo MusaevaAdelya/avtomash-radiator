@@ -15,6 +15,7 @@ function HomePage() {
             <Technics/>
             <ProductsMain/>
             <AdditionalInfo/>
+            
             <LeavaApplication/>
         </>
     )

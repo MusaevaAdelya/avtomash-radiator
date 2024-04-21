@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
-function Button({ children, styleClasses, isLink=false, to }) {
+function Button({ children, styleClasses, isLink=false, to, onClickHandler }) {
   return (
     isLink ? (
       <Link to={to} className={`inline-block ${styleClasses}`}>
         {children}
       </Link>
     ) : (
-      <button className={styleClasses}>
+      <button type="button" className={styleClasses} onClick={onClickHandler}>
         {children}
       </button>
     )
