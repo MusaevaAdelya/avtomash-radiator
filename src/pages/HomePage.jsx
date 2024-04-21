@@ -1,9 +1,24 @@
-function Homepage() {
+import HeroImage from "../components/HeroImage"
+import HeroInfoBlock from "../components/HeroInfoBlock"
+import Technologies from "../components/Technologies"
+import Technics from "../components/Technics"
+import ProductsMain from "../components/ProductsMain"
+import AdditionalInfo from "../components/AdditionalInfo"
+import LeavaApplication from "../components/LeaveApplication"
+
+function HomePage() {
     return (
-        <div>
+        <>
+            <HeroInfoBlock/>
+            <HeroImage/>
+            <Technologies/>
+            <Technics/>
+            <ProductsMain/>
+            <AdditionalInfo/>
             
-        </div>
+            <LeavaApplication/>
+        </>
     )
 }
 
-export default Homepage
+export default HomePage

@@ -1,10 +1,16 @@
-function Button({ children, rounded = "full", py = "2.5", px = "4" }) {
+import { Link } from "react-router-dom";
+
+function Button({ children, styleClasses, isLink=false, to, onClickHandler }) {
   return (
-    <button
-      className={`border-primary border-2 rounded-${rounded} py-${py} px-${px} text-dark-200`}
-    >
-      {children}
-    </button>
+    isLink ? (
+      <Link to={to} className={`inline-block ${styleClasses}`}>
+        {children}
+      </Link>
+    ) : (
+      <button type="button" className={styleClasses} onClick={onClickHandler}>
+        {children}
+      </button>
+    )
   );
 }
 
