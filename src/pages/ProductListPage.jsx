@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 //import Navbar from '../components/Navbar';
 
-function ProductList() {
+function ProductListPage() {
     const [activeButton, setActiveButton] = useState('Трактора');
     const data = [
         {
@@ -70,14 +70,14 @@ function ProductList() {
         },
 ]
     return (
-        <div className="product-list bg-white p-4">
-            <div className="product-list-header text-center p-5">
+        <div className="p-4 bg-white product-list">
+            <div className="p-5 text-center product-list-header">
                 <h1 className="text-6xl font-semibold text-gray-800">Продукция</h1>
-                <p className="text-gray-600 font-semibold mt-4">
+                <p className="mt-4 font-semibold text-gray-600">
                     Компания с многолетним опытом поставок специальной <br /> и сельскохозяйственной техники.
                     Самый широкий ассортимент <br /> представленный на рынке Кыргызстана известных международных брендов.
                 </p>
-                <div className="product-list-buttons flex flex-col md:flex-row justify-center gap-2 mt-5">
+                <div className="flex flex-col justify-center gap-2 mt-5 product-list-buttons md:flex-row">
                     <button
                         type="button"
                         className={`px-6 py-3 ${activeButton === 'Трактора' ? 'bg-red-600' : 'bg-gray-300'} text-white font-semibold cursor-pointer transition-colors duration-300 hover:bg-red-700 rounded-3xl`}
@@ -103,31 +103,31 @@ function ProductList() {
             </div>
             <div className="flex flex-wrap -m-4">
                 {data.map((tractor) => (
-                    <div key={tractor.id} className="p-4 w-full md:w-1/2 lg:w-1/4">
-                        <div className="flex flex-col h-full bg-white border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-lg">
+                    <div key={tractor.id} className="w-full p-4 md:w-1/2 lg:w-1/4">
+                        <div className="flex flex-col h-full overflow-hidden bg-white border-2 border-gray-200 rounded-lg shadow-lg border-opacity-60">
                             <img
-                                className="w-full object-cover" // Removed the height restriction to make it more stretched
+                                className="object-cover w-full" // Removed the height restriction to make it more stretched
                                 style={{ height: "200px" }} // Added inline style to control the image height
                                 src={tractor.img}
                                 alt="Трактор"
                             />
-                            <div className="p-6 flex-grow">
-                                <h2 className="text-lg font-medium text-gray-900 mb-1">{tractor.name}</h2>
-                                <div className="leading-relaxed mb-3">
+                            <div className="flex-grow p-6">
+                                <h2 className="mb-1 text-lg font-medium text-gray-900">{tractor.name}</h2>
+                                <div className="mb-3 leading-relaxed">
                                     <div className="flex items-center mb-1">
                                         <img src="images/calendar.svg" alt="Год" className="w-4 h-4 mr-2" />
-                                        <span className="text-gray-600 text-sm">Год выпуска: {tractor.date}</span>
+                                        <span className="text-sm text-gray-600">Год выпуска: {tractor.date}</span>
                                     </div>
                                     <div className="flex items-center mb-1">
                                         <img src="images/angle.svg" alt="Мощность" className="w-4 h-4 mr-2" />
-                                        <span className="text-gray-600 text-sm">Мощность: {tractor.hp} л.с.</span>
+                                        <span className="text-sm text-gray-600">Мощность: {tractor.hp} л.с.</span>
                                     </div>
                                     <div className="flex items-center mb-1">
                                         <img src="images/other.svg" alt="Страна" className="w-4 h-4 mr-2" />
-                                        <span className="text-gray-600 text-sm">Страна: {tractor.country}</span>
+                                        <span className="text-sm text-gray-600">Страна: {tractor.country}</span>
                                     </div>
                                 </div>
-                                <a href="#" className="bg-white text-black border border-red-500 px-6 py-2 rounded-full text-sm shadow-sm hover:shadow-md transition duration-300 ease-in-out hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+                                <a href="#" className="px-6 py-2 text-sm text-black transition duration-300 ease-in-out bg-white border border-red-500 rounded-full shadow-sm hover:shadow-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
                                     Узнать подробнее
                                 </a>
                             </div>
@@ -140,4 +140,4 @@ function ProductList() {
     );
 }
 
-export default ProductList
+export default ProductListPage
