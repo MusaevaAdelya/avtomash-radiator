@@ -1,8 +1,8 @@
 function Footer() {
     return (
-        <div>
+        <footer className="container py-28">
             
-        </div>
+        </footer>
     )
 }
 

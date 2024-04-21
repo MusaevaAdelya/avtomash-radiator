@@ -36,7 +36,7 @@ function ProductsMain() {
           country="Испания"
         />
         <ProductCard
-          id={1}
+          id={2}
           image="/images/tractor-3.jpg"
           name="Трактор HWW9"
           price="12 000 000"
@@ -45,7 +45,7 @@ function ProductsMain() {
           country="Испания"
         />
         <ProductCard
-          id={1}
+          id={3}
           image="/images/tractor-4.jpg"
           name="Трактор XCMG 1"
           price="12 000 000"
@@ -54,7 +54,7 @@ function ProductsMain() {
           country="Испания"
         />
         <ProductCard
-          id={1}
+          id={4}
           image="/images/tractor-main-1.jpg"
           name="Трактор UX92"
           price="12 000 000"

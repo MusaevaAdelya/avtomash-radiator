@@ -4,6 +4,7 @@ import Technologies from "../components/Technologies"
 import Technics from "../components/Technics"
 import ProductsMain from "../components/ProductsMain"
 import AdditionalInfo from "../components/AdditionalInfo"
+import LeavaApplication from "../components/LeaveApplication"
 
 function HomePage() {
     return (
@@ -14,6 +15,7 @@ function HomePage() {
             <Technics/>
             <ProductsMain/>
             <AdditionalInfo/>
+            <LeavaApplication/>
         </>
     )
 }
