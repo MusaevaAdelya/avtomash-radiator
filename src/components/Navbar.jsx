@@ -70,7 +70,7 @@ export default function Navbar() {
         </Popover.Group>
         <div className="hidden lg:flex lg:justify-end lg:items-center ">
           <Link to="#" className="mr-2">
-            <img src="/images/Whatsapp.svg" alt="instagram icon" />
+            <img src="/images/Whatsapp.svg" alt="whatsapp icon" />
           </Link>
           <Link to="#">
             <img src="/images/Instagram.svg" alt="instagram icon" />
