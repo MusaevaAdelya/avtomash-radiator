@@ -115,15 +115,15 @@ function ProductListPage() {
                                 <h2 className="mb-1 text-lg font-medium text-gray-900">{tractor.name}</h2>
                                 <div className="mb-3 leading-relaxed">
                                     <div className="flex items-center mb-1">
-                                        <img src="images/calendar.svg" alt="Год" className="w-4 h-4 mr-2" />
+                                        <img src="/images/calendar-icon.svg" alt="Год" className="w-4 h-4 mr-2" />
                                         <span className="text-sm text-gray-600">Год выпуска: {tractor.date}</span>
                                     </div>
                                     <div className="flex items-center mb-1">
-                                        <img src="images/angle.svg" alt="Мощность" className="w-4 h-4 mr-2" />
+                                        <img src="/images/power-icon.svg" alt="Мощность" className="w-4 h-4 mr-2" />
                                         <span className="text-sm text-gray-600">Мощность: {tractor.hp} л.с.</span>
                                     </div>
                                     <div className="flex items-center mb-1">
-                                        <img src="images/other.svg" alt="Страна" className="w-4 h-4 mr-2" />
+                                        <img src="/images/country-icon.svg" alt="Страна" className="w-4 h-4 mr-2" />
                                         <span className="text-sm text-gray-600">Страна: {tractor.country}</span>
                                     </div>
                                 </div>
