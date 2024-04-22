@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-//import Navbar from '../components/Navbar';
+
 
 function ProductListPage() {
     const [activeButton, setActiveButton] = useState('Трактора');
@@ -106,8 +106,8 @@ function ProductListPage() {
                     <div key={tractor.id} className="w-full p-4 md:w-1/2 lg:w-1/4">
                         <div className="flex flex-col h-full overflow-hidden bg-white border-2 border-gray-200 rounded-lg shadow-lg border-opacity-60">
                             <img
-                                className="object-cover w-full" // Removed the height restriction to make it more stretched
-                                style={{ height: "200px" }} // Added inline style to control the image height
+                                className="object-cover w-full"
+                                style={{ height: "200px" }}
                                 src={tractor.img}
                                 alt="Трактор"
                             />
