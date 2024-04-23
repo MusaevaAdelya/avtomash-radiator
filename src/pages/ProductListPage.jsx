@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Button from "../components/Button";
 
 function ProductListPage() {
     const [activeButton, setActiveButton] = useState('Трактора');
@@ -68,7 +68,7 @@ function ProductListPage() {
             country:"Белорусь",
             hp:"1000",
         },
-]
+    ]
     return (
         <div className="p-4 bg-white product-list">
             <div className="p-5 text-center product-list-header">
@@ -127,9 +127,13 @@ function ProductListPage() {
                                         <span className="text-sm text-gray-600">Страна: {tractor.country}</span>
                                     </div>
                                 </div>
-                                <a href="#" className="px-6 py-2 text-sm text-black transition duration-300 ease-in-out bg-white border border-red-500 rounded-full shadow-sm hover:shadow-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
-                                    Узнать подробнее
-                                </a>
+                                <Button
+                                    styleClasses="mt-3 py-1 px-3 border border-primary border-2 text-l text-dark-400 font-medium rounded-full hover:bg-primary hover:text-white transition ease-in-out duration-200"
+                                    isLink={true}
+                                    to={`/products/${tractor.id}`}
+                                >
+                                    <span>Узнать подробнее</span>
+                                </Button>
                             </div>
                         </div>
                     </div>
