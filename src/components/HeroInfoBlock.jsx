@@ -12,10 +12,10 @@ function HeroInfoBlock() {
         заводов-изготовителей
       </p>
       <div className="flex mt-8">
-        <Button styleClasses="mr-4 py-2.5 px-8 bg-primary text-lg text-white font-medium rounded-full">
+        <Button isLink={true} to={"/products"} styleClasses="mr-4 py-2.5 px-8 bg-primary text-lg text-white font-medium rounded-full">
           Купить
         </Button>
-        <Button styleClasses="flex items-center rounded-full py-2.5 px-4 md:px-8 text-dark-100 font-medium border border-dark-100">
+        <Button isLink={true} to={"/products"} styleClasses="flex items-center rounded-full py-2.5 px-4 md:px-8 text-dark-100 font-medium border border-dark-100">
           <span className="mr-2">Узнать подробнее</span>
           <img className="w-2.5 h-4" src="images/Arrow.svg" alt="arrow" />
         </Button>
