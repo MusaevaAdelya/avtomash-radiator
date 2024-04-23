@@ -14,7 +14,7 @@ export default function Navbar() {
         aria-label="Global"
       >
         <div className="flex ">
-          <NavLink to="#" className="-m-1.5 p-1.5">
+          <NavLink to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img className="w-auto h-8" src="/images/Logo.svg" alt="" />
           </NavLink>
