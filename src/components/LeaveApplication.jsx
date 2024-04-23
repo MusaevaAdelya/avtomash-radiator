@@ -14,7 +14,7 @@ function LeavaApplication() {
         Самый широкий ассортимент представленный на рынке Кыргызстана известных
         международных брендов.
       </p>
-      <ApplicationButton formTitle="Отличный выбор! Оставьте номер для связи">
+      <ApplicationButton formTitle="Оставьте номер для связи">
         <span className="whitespace-nowrap">Оставить заявку</span>
         <ChevronRightIcon className="w-6 h-6" aria-hidden="true" />
       </ApplicationButton>

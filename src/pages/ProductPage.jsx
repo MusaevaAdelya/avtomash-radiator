@@ -1,88 +1,107 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import ApplicationButton from '../components/ApplicationButton';
-const productDetails = {
-    id: '1',
-    name: 'Трактор UX92a',
-    price: '4 500 000 сом',
-    imageUrl: "/images/tractor-main-1.jpg",
-    main_features: [
-        { key: 'Семейство продуктов', value: 'Тяжелая техника' },
-        { key: 'Тип бензина', value: 'Дизель' },
-        { key: 'Мощность', value: '562 л.с.' },
-        { key: 'Максимальная мощность при уплотнении условиях', value: '700 лс' },
-        { key: 'Максимальная мощность при уплотнении условиях', value: '700 лс' },
-        { key: 'Максимальная мощность при уплотнении условиях', value: '700 лс' },
-        // ... другие основные характеристики
-    ],
-    other_features: [
-        { key: 'Эко тип', value: 'Euro 5' },
-        { key: 'Максимальная мощность при уплотнении условиях', value: '700 лс' },
-        { key: 'Размеры корзин:', value: '400x400 мм' },
-        { key: 'Эко тип', value: 'Euro 5' },
-        { key: 'Тип бензина', value: 'Дизель' },
-        { key: 'Семейство продуктов', value: 'Тяжелая техника' },
-        { key: 'Семейство продуктов', value: 'Тяжелая техника' },
-        { key: 'Семейство продуктов', value: 'Тяжелая техника' },
+import { useParams } from "react-router-dom";
+import Carousel from "../components/Carousel";
+import ProductInfo from "../components/ProductInfo";
+import ProductCard from "../components/ProductCard";
+import ProductsGrid from "../components/ProductsGrid";
 
-
-
-
-    ]
-};
 function ProductPage() {
-    const { id } = useParams();
-    const product = productDetails; // В реальном приложении здесь будет запрос к API
+  const { id } = useParams();
+  const images = [
+    "/images/tractor-2.jpg",
+    "/images/tractor-3.jpg",
+    "/images/tractor-4.jpg",
+    "/images/tractor-main-1.jpg",
+  ];
+  const productData = {
+    id: "1",
+    name: "Трактор UX92а",
+    model: "SPG405M",
+    price: "4 500 000",
+    // allModels: ["SPG405M", "SPG405X", "SPG405U"],
+    allModels: [
+      { id: "1", name: "Трактор UX92а", model: "SPG405M" },
+      { id: "2", name: "Трактор UX92а", model: "SPG405X" },
+      { id: "3", name: "Трактор UX92а", model: "SPG405U" },
+    ],
+    mainCharacteristics: [
+      { name: "Семейство продуктов", value: "Тяжелая техника" },
+      { name: "Тип бензина", value: "Дизель" },
+      { name: "Мощность", value: "562 Л.C" },
+      { name: "Высота рабочего проема", value: "309 мм" },
+      { name: "Размеры корзин", value: "400x400 мм" },
+      { name: "Максимальная мощность при лучших условиях", value: "700 л.c" },
+      { name: "Эко тип", value: "Euro 5" },
+      { name: "Размеры (ВxШxГ)", value: "440x530x695 СМ" },
+    ],
+    otherCharacteristics: [
+      { name: "Семейство продуктов", value: "Тяжелая техника" },
+      { name: "Тип бензина", value: "Дизель" },
+      { name: "Мощность", value: "562 Л.C" },
+      { name: "Высота рабочего проема", value: "309 мм" },
+      { name: "Размеры корзин", value: "400x400 мм" },
+      { name: "Максимальная мощность при лучших условиях", value: "700 л.c" },
+      { name: "Эко тип", value: "Euro 5" },
+      { name: "Размеры (ВxШxГ)", value: "440x530x695 СМ" },
+      { name: "Семейство продуктов", value: "Тяжелая техника" },
+      { name: "Тип бензина", value: "Дизель" },
+      { name: "Мощность", value: "562 Л.C" },
+      { name: "Высота рабочего проема", value: "309 мм" },
+      { name: "Размеры корзин", value: "400x400 мм" },
+      { name: "Максимальная мощность при лучших условиях", value: "700 л.c" },
+      { name: "Эко тип", value: "Euro 5" },
+      { name: "Размеры (ВxШxГ)", value: "440x530x695 СМ" },
+    ],
+  };
 
-    // Проверка на соответствие ID продукта
-    if (product.id !== id) {
-        return <div>Продукт не найден</div>;
-    }
-    const renderFeatureList = (features, columns) => {
-        const gridClass = columns === 2 ? 'grid-cols-2' : 'grid-cols-4';
-        return (
-            <div className={`grid ${gridClass} gap-8 w-full`}>
-                {features.map((feature, index) => (
-                    <div key={index} className="bg-white">
-                        <div className="text-zinc-400 text-lg font-medium">{feature.key}:</div>
-                        <div className="text-black text-lg font-semibold">{feature.value}</div>
-                    </div>
-                ))}
-            </div>
-        );
-    };
-
-    return (
-        <div className="bg-white overflow-hidden sm:rounded-lg">
-            <div className="h-[473px] md:h-[587px] overflow-hidden relative rounded-3xl">
-
-                <img className="w-full h-full object-cover" src={product.imageUrl} alt={product.name} />
-            </div>
-            <div className="flex flex-col md:flex-row py-8 px-6">
-
-                <div className="md:w-1/2 flex flex-col justify-between mb-20 mt-10">
-                    <div>
-                        <h1 className="text-5xl font-semibold">{product.name}</h1>
-                        <p className="text-2xl font-semibold mt-2">{product.model}</p>
-                    </div>
-                    <div>
-                        <p className="text-4xl font-semibold my-4">{product.price}</p>
-                        <ApplicationButton formTitle="Оставить заявку на трактор">
-                            Оставить заявку
-                        </ApplicationButton>
-                    </div>
-                </div>
-
-                <div className="md:w-1/2 mt-6 md:mt-10">
-                    {renderFeatureList(product.main_features, 2)}
-                </div>
-            </div>
-            <div className="w-full mt-20 mb-20 px-6 ">
-                <h2 className="text-3xl font-medium mb-8 ">Остальные характеристики</h2>
-                {renderFeatureList(product.other_features, 4)}
-            </div>
-        </div>
-    );
+  return (
+    <div>
+      <Carousel images={images} />
+      <ProductInfo data={productData} />
+      <div className="mt-5 mb-12">
+        <h3 className="text-2xl font-semibold md:text-4xl">
+          Остальные варинаты
+        </h3>
+        <ProductsGrid>
+          <ProductCard
+            id={1}
+            image="/images/tractor-2.jpg"
+            name="Трактор UX1"
+            price="12 000 000"
+            year={2024}
+            power={900}
+            country="Испания"
+          />
+          <ProductCard
+            id={2}
+            image="/images/tractor-3.jpg"
+            name="Трактор HWW9"
+            price="12 000 000"
+            year={2024}
+            power={900}
+            country="Испания"
+          />
+          <ProductCard
+            id={3}
+            image="/images/tractor-4.jpg"
+            name="Трактор XCMG 1"
+            price="12 000 000"
+            year={2024}
+            power={900}
+            country="Испания"
+          />
+          <ProductCard
+            id={4}
+            image="/images/tractor-main-1.jpg"
+            name="Трактор UX92"
+            price="12 000 000"
+            year={2024}
+            power={900}
+            country="Испания"
+          />
+        </ProductsGrid>
+      </div>
+    </div>
+  );
 }
 
 export default ProductPage;
