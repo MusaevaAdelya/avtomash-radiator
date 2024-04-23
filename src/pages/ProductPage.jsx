@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import ProductInfo from "../components/ProductInfo";
+import ProductCard from "../components/ProductCard";
+import ProductsGrid from "../components/ProductsGrid";
 
 function ProductPage() {
   const { id } = useParams();
@@ -55,6 +57,49 @@ function ProductPage() {
     <div>
       <Carousel images={images} />
       <ProductInfo data={productData} />
+      <div className="mt-5 mb-12">
+        <h3 className="text-2xl font-semibold md:text-4xl">
+          Остальные варинаты
+        </h3>
+        <ProductsGrid>
+          <ProductCard
+            id={1}
+            image="/images/tractor-2.jpg"
+            name="Трактор UX1"
+            price="12 000 000"
+            year={2024}
+            power={900}
+            country="Испания"
+          />
+          <ProductCard
+            id={2}
+            image="/images/tractor-3.jpg"
+            name="Трактор HWW9"
+            price="12 000 000"
+            year={2024}
+            power={900}
+            country="Испания"
+          />
+          <ProductCard
+            id={3}
+            image="/images/tractor-4.jpg"
+            name="Трактор XCMG 1"
+            price="12 000 000"
+            year={2024}
+            power={900}
+            country="Испания"
+          />
+          <ProductCard
+            id={4}
+            image="/images/tractor-main-1.jpg"
+            name="Трактор UX92"
+            price="12 000 000"
+            year={2024}
+            power={900}
+            country="Испания"
+          />
+        </ProductsGrid>
+      </div>
     </div>
   );
 }

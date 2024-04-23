@@ -2,8 +2,9 @@ import Input from "./Input";
 import { useState } from "react";
 import axios from "axios";
 
-function ApplicationForm({ setIsSubmitted }) {
+function ApplicationForm({ setIsSubmitted, productId=null }) {
   const [formData, setFormData] = useState({
+    id:productId,
     name: "",
     phoneNumber: "",
   });

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "./Button";
 import ModalWindow from "./ModalWindow";
 
-function ApplicationButton({ children, formTitle }) {
+function ApplicationButton({ children, formTitle, productId }) {
   const [open, setOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -24,6 +24,7 @@ function ApplicationButton({ children, formTitle }) {
         title={formTitle}
         isSubmitted={isSubmitted}
         setIsSubmitted={setIsSubmitted}
+        productId={productId}
       />
     </>
   );

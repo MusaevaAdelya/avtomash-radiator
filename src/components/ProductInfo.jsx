@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Characteristic from "./Characteristic";
-import ProductCard from "./ProductCard";
-import ProductsGrid from "./ProductsGrid";
+
+import ApplicationButton from "./ApplicationButton";
 
 function ProductInfo({ data }) {
   return (
@@ -25,9 +25,9 @@ function ProductInfo({ data }) {
           <p className="mb-2 text-3xl font-semibold mt-9">
             От {data.price} сом
           </p>
-          <button className="px-6 py-3 text-lg font-bold text-white rounded-full bg-primary">
-            Оставить заявку
-          </button>
+          <ApplicationButton formTitle="Отличный выбор! Оставьте номер для связи" productId={data.id}>
+            <span className="whitespace-nowrap">Оставить заявку</span>
+          </ApplicationButton>
         </div>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
           {data.mainCharacteristics.map((ch) => (
@@ -46,49 +46,7 @@ function ProductInfo({ data }) {
           ))}
         </div>
       </div>
-      <div className="mt-5">
-        <h3 className="text-2xl font-semibold md:text-4xl">
-          Остальные варинаты
-        </h3>
-        <ProductsGrid>
-          <ProductCard
-            id={1}
-            image="/images/tractor-2.jpg"
-            name="Трактор UX1"
-            price="12 000 000"
-            year={2024}
-            power={900}
-            country="Испания"
-          />
-          <ProductCard
-            id={2}
-            image="/images/tractor-3.jpg"
-            name="Трактор HWW9"
-            price="12 000 000"
-            year={2024}
-            power={900}
-            country="Испания"
-          />
-          <ProductCard
-            id={3}
-            image="/images/tractor-4.jpg"
-            name="Трактор XCMG 1"
-            price="12 000 000"
-            year={2024}
-            power={900}
-            country="Испания"
-          />
-          <ProductCard
-            id={4}
-            image="/images/tractor-main-1.jpg"
-            name="Трактор UX92"
-            price="12 000 000"
-            year={2024}
-            power={900}
-            country="Испания"
-          />
-        </ProductsGrid>
-      </div>
+      
     </div>
   );
 }

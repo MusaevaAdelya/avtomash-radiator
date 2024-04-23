@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import ApplicationForm from "./ApplicationForm";
 
-export default function ModalWindow({ open, setOpen, title, isSubmitted, setIsSubmitted }) {
+export default function ModalWindow({ open, setOpen, title, isSubmitted, setIsSubmitted,productId }) {
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -51,7 +51,7 @@ export default function ModalWindow({ open, setOpen, title, isSubmitted, setIsSu
                       </p>
                     </div>
 
-                    <ApplicationForm setIsSubmitted={setIsSubmitted} />
+                    <ApplicationForm setIsSubmitted={setIsSubmitted} productId={productId} />
                   </>
                 )}
               </Dialog.Panel>
