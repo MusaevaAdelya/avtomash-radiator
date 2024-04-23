@@ -8,7 +8,7 @@ function ProductCard({ id, image, name, price, year, power, country }) {
         <img
           src={image}
           alt="tractor"
-          className="w-full max-w-[300px] min-h-[380px] object-cover rounded-lg"
+          className="w-full min-h-[380px] object-cover rounded-lg"
         />
         <h4 className="mt-3 text-2xl font-semibold text-dark-400">{name}</h4>
         <p className="mt-1 mb-2">{price} сом</p>
