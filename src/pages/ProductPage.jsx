@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-
 import ApplicationButton from '../components/ApplicationButton';
 const productDetails = {
     id: '1',
@@ -31,26 +30,27 @@ const productDetails = {
 
     ]
 };
-
-
 function ProductPage() {
     const { id } = useParams();
     const product = productDetails; // В реальном приложении здесь будет запрос к API
 
-
+    // Проверка на соответствие ID продукта
     if (product.id !== id) {
         return <div>Продукт не найден</div>;
     }
-    const renderFeatureList = (features, columns) => (
-        <div className={`grid grid-cols-${columns} gap-8 w-full`}>
-            {features.map((feature, index) => (
-                <div key={index} className="bg-white ">
-                    <div className="text-zinc-400 text-lg font-medium">{feature.key}:</div>
-                    <div className="text-black text-lg font-semibold">{feature.value}</div>
-                </div>
-            ))}
-        </div>
-    );
+    const renderFeatureList = (features, columns) => {
+        const gridClass = columns === 2 ? 'grid-cols-2' : 'grid-cols-4';
+        return (
+            <div className={`grid ${gridClass} gap-8 w-full`}>
+                {features.map((feature, index) => (
+                    <div key={index} className="bg-white">
+                        <div className="text-zinc-400 text-lg font-medium">{feature.key}:</div>
+                        <div className="text-black text-lg font-semibold">{feature.value}</div>
+                    </div>
+                ))}
+            </div>
+        );
+    };
 
     return (
         <div className="bg-white overflow-hidden sm:rounded-lg">
