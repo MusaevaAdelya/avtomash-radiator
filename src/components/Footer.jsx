@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="py-28 bg-dark-400">
       <div className="mx-auto flex container items-start justify-between p-6 md:px-8 lg:max-w-[83rem] text-dark-200 font-medium gap-8 lg:gap-36 lg:flex-row flex-col">
-        <img src="/images/Logo.svg" alt="logo" />
+          <img className="w-auto h-16" src="/images/logo_1.jpg" alt="Logo"/>
         <p className="text-xl">
           Шестая планета по удалённости от Солнца и вторая по размерам планета в
           Солнечной системе после Юпитера.
