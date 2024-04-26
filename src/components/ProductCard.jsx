@@ -4,7 +4,7 @@ import Button from "./Button";
 
 function ProductCard({id, image, name, price, year, power, country, attributes}) {
     const handleClick = () => {
-         window.location = `/products/${id}`;
+        window.location = `/products/${id}`;
     };
 
     return (
@@ -13,7 +13,8 @@ function ProductCard({id, image, name, price, year, power, country, attributes})
                 <img
                     src={image}
                     alt="tractor"
-                    className="w-full min-h-[380px] object-cover rounded-lg"
+                    onClick={handleClick}
+                    className="w-full min-h-[380px] object-cover rounded-lg cursor-pointer"
                 />
                 <h4 className="mt-3 text-2xl font-semibold text-dark-400">
                     {name.length > 18 ? `${name.substring(0, 18)}...` : name}
@@ -40,13 +41,18 @@ function ProductCard({id, image, name, price, year, power, country, attributes})
                         text={`Страна: ${country}`}
                     />
                 )}
-                {!year && !power && !country && attributes.slice(0, 3).map((attr, index) => (
-                    <ProductCharacteristics
-                        key={index}
-                        icon="/images/power-icon.svg" // Иконка для характеристик, замените на нужную
-                        text={`${attr.key}: ${attr.value}`}
-                    />
-                ))}
+                {!year && !power && !country && attributes.slice(0, 3).map((attr, index) => {
+                    const text = `${attr.key}: ${attr.value}`;
+                    const displayText = text.length > 18 ? `${text.substring(0, 18)}...` : text; // Укорачиваем текст, если он длиннее 24 символов
+
+                    return (
+                        <ProductCharacteristics
+                            key={index}
+                            icon="/images/power-icon.svg" // Замените "/images/power-icon.svg" на нужную иконку, если это требуется
+                            text={displayText}
+                        />
+                    );
+                })}
 
                 <Button
                     styleClasses="mt-3 py-3 px-5 border border-primary border-2 text-xl text-dark-400 font-medium rounded-full hover:bg-primary hover:text-white transition ease-in-out duration-200"
