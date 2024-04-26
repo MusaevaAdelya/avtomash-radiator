@@ -30,8 +30,8 @@ function ProductInfo({ data }) {
           </ApplicationButton>
         </div>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-          {data.attributes.map((ch) => (
-            <Characteristic name={ch.key} value={ch.value} />
+          {data.attributes.map((ch, index) => (
+            <Characteristic key={index} name={ch.key} value={ch.value} />
           ))}
         </div>
       </div>
@@ -41,8 +41,8 @@ function ProductInfo({ data }) {
           Остальные характеристики
         </h3>
         <div className="grid grid-cols-1 gap-10 mt-5 md:grid-cols-2 lg:grid-cols-4 md:mt-7">
-          {data.attributes.map((ch) => (
-            <Characteristic name={ch.key} value={ch.value} />
+          {data.attributes.map((ch, index) => (
+            <Characteristic key={index} name={ch.key} value={ch.value} />
           ))}
         </div>
       </div>

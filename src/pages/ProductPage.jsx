@@ -90,14 +90,12 @@ function ProductPage() {
                 }
             }
         };
-
-
         fetchOtherProducts();
     }, []);
 
     return (
         <div>
-            {productData && (
+            {productData && otherProducts.length > 0 && (
                 <>
                     <Carousel images={productData.images.map(img => img.image.replace("/media", `${BASE_URL}/media`))}/>
                     <ProductInfo data={productData}/>
@@ -106,13 +104,14 @@ function ProductPage() {
                             Остальные варинаты
                         </h3>
                         <ProductsGrid>
-                            {otherProducts.length > 0 ?? otherProducts.map((model, index) => (
+                            {otherProducts.map((model, index) => (
                                 <ProductCard
                                     key={index}
                                     id={model.id}
-                                    // image={`/images/tractor-${index + 1}.jpg`}
+                                    image={model.images.length > 0 ? model.images[0].image.replace("/media", `${BASE_URL}/media`) : null}
                                     name={model.name}
                                     price={model.price}
+                                    attributes={model.attributes}
                                 />
                             ))}
                         </ProductsGrid>
