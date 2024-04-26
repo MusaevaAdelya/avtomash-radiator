@@ -26,8 +26,8 @@ export default function Carousel({ images }) {
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper2 rounded-3xl max-h-[394px] md:max-h-[664px]"
       >
-        {images.map((image) => (
-          <SwiperSlide>
+        {images.map((image, index) => (
+          <SwiperSlide key={`main-${index}`}>
             <img src={image} alt="tractor" />
           </SwiperSlide>
         ))}
@@ -42,8 +42,8 @@ export default function Carousel({ images }) {
         modules={[FreeMode, Navigation, Thumbs]}
         className="!p-2 md:!pb-10 md:!px-10 mySwiper !relative md:!absolute md:!bottom-0 md:!left-0 !z-10"
       >
-        {images.map((image) => (
-          <SwiperSlide>
+        {images.map((image, index) => (
+          <SwiperSlide key={`thumb-${index}`}>
             <img src={image} alt="tractor" className="cursor-pointer" />
           </SwiperSlide>
         ))}
