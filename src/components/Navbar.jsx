@@ -17,7 +17,7 @@ export default function Navbar() {
                 <div className="flex ">
                     <NavLink to="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">Your Company</span>
-                        <img className="w-auto h-8" src="/images/Logo.svg" alt=""/>
+                        <img className="w-auto h-16" src="/images/logo_1.jpg" alt="Logo"/>
                     </NavLink>
                 </div>
                 <div className="flex lg:hidden">
@@ -64,13 +64,13 @@ export default function Navbar() {
                     {/*</NavLink>*/}
                     <NavLink
                         to="/"
-                        className="text-sm font-semibold leading-6 text-gray-900"
+                        className="text-lg font-semibold leading-6 text-gray-900 "
                     >
                         Главная
                     </NavLink>
                     <NavLink
                         to="/products"
-                        className="text-sm font-semibold leading-6 text-gray-900"
+                        className="text-lg font-semibold leading-6 text-gray-900"
                     >
                         Продукты
                     </NavLink>
@@ -104,7 +104,7 @@ export default function Navbar() {
                     <div className="flex items-center justify-between">
                         <NavLink to="#" className="-m-1.5 p-1.5">
                             <span className="sr-only">Your Company</span>
-                            <img className="w-auto h-8" src="/images/Logo.svg" alt=""/>
+                            <img className="w-auto h-14" src="/images/logo_1.jpg" alt=""/>
                         </NavLink>
                         <button
                             type="button"

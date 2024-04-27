@@ -30,3 +30,37 @@ export const getRandomProducts = async () => {
         }
     }
 };
+
+// Функция для получения списка всех продуктов
+export const getProducts = async () => {
+  try {
+    const response = await API.get('/products/');
+    console.log('Products data:', response.data);
+    return response.data;
+  } catch (error) {
+    console.error('API error:', error);
+    return { error: "Произошла ошибка при попытке получения списка продуктов" };
+  }
+};
+
+export const getCategories = async () => {
+  try {
+    const response = await API.get('/categories/');
+    console.log('Categories data:', response.data);
+    return response.data;
+  } catch (error) {
+    console.error('API error:', error);
+    return { error: "Произошла ошибка при попытке получения списка категорий" };
+  }
+};
+
+export const getProductsByCategory = async (categoryId) => {
+  try {
+    const response = await API.get(`/categories/${categoryId}/products/`);
+    console.log(`Products data for category ${categoryId}:`, response.data);
+    return response.data;
+  } catch (error) {
+    console.error('API error:', error);
+    return { error: "Произошла ошибка при попытке получения продуктов по категории" };
+  }
+};
