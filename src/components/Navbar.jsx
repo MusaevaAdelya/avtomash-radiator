@@ -84,9 +84,9 @@ export default function Navbar() {
                     </Link>
                     <p className="h-5 mx-2 border-r border-gray-300"></p>
                     <ApplicationButton formTitle="Оставьте номер для связи">
-                                    <span className="whitespace-nowrap">Заказать звонок</span>
-                                    <ChevronRightIcon className="w-6 h-6" aria-hidden="true"/>
-                                </ApplicationButton>
+                        <span className="whitespace-nowrap">Заказать звонок</span>
+                        <ChevronRightIcon className="w-6 h-6" aria-hidden="true"/>
+                    </ApplicationButton>
                     {/*<button className="border-primary border-2 rounded-full py-2.5 px-4 text-dark-200">*/}
                     {/*    Заказать звонок*/}
                     {/*</button>*/}
@@ -174,7 +174,9 @@ export default function Navbar() {
                                     </Link>
                                     <p className="mx-3 border-r border-black h-7"></p>
                                     <span className="text-lg font-medium text-dark-400">
-                    +996 (997) 91-91-70
+                    <a href="tel:+996997919170" style={{textDecoration: 'none', color: 'inherit'}}>
+    +996 (997) 91-91-70
+  </a>
                   </span>
                                 </div>
                                 <ApplicationButton formTitle="Оставьте номер для связи">

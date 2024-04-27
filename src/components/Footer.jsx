@@ -10,8 +10,8 @@ function Footer() {
           Солнечной системе после Юпитера.
         </p>
         <div>
-          <p className="flex gap-5 whitespace-nowrap"><Link to="#">Про нас</Link><Link to="#">Преимущества</Link><Link to="#">Хиты продаж</Link></p>
-          <p className="flex gap-5 whitespace-nowrap"><Link to="#">Модельный ряд</Link><Link to="#">Наши кейсы</Link><Link to="#">Продукты</Link></p>
+          {/*<p className="flex gap-5 whitespace-nowrap"><Link to="#">Про нас</Link><Link to="#">Преимущества</Link><Link to="#">Хиты продаж</Link></p>*/}
+          <p className="flex gap-5 whitespace-nowrap"><Link to="/">Главная</Link><Link to="/products">Продукты</Link><Link to="/">Наши кейсы</Link></p>
         </div>
         <div className="flex gap-3">
           <Link to="#">
