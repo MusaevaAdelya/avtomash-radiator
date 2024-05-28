@@ -11,12 +11,12 @@ function HeroInfoBlock() {
         логистическая сеть  -  обеспечивает бесперебойные поставки напрямую с
         заводов-изготовителей
       </p>
-      <div className="flex mt-8">
-        <Button isLink={true} to={"/products"} styleClasses="mr-4 py-2.5 px-8 bg-primary text-lg text-white font-medium rounded-full">
+      <div className="flex gap-2 mt-8 md:gap-4">
+        <Button isLink={true} to={"/products"} styleClasses=" py-2.5 px-8 bg-primary text-sm md:text-base lg:text-lg text-white font-medium rounded-full flex items-center justify-center">
           Купить
         </Button>
-        <Button isLink={true} to={"/products"} styleClasses="flex items-center rounded-full py-2.5 px-4 md:px-8 text-dark-100 font-medium border border-dark-100">
-          <span className="mr-2">Узнать подробнее</span>
+        <Button isLink={true} to={"/products"} styleClasses="flex items-center rounded-full py-2.5 px-4 md:px-8 text-dark-100 font-medium border border-dark-100 justify-center ">
+          <span className="mr-1 text-sm md:text-base lg:text-lg md:mr-2">Узнать подробнее</span>
           <img className="w-2.5 h-4" src="images/Arrow.svg" alt="arrow" />
         </Button>
       </div>

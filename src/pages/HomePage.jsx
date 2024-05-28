@@ -15,7 +15,6 @@ function HomePage() {
             <Technics/>
             <ProductsMain/>
             <AdditionalInfo/>
-            
             <LeaveApplication/>
         </>
     )
