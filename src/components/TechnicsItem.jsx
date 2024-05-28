@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Button from "./Button";
 import { ChevronRightIcon } from "@heroicons/react/16/solid";
 
-function TechnicsItem({ image, description, id }) {
+function TechnicsItem({ image, title,description, id }) {
   return (
     <div className="relative flex min-h-[248px] md:min-h-[495px] overflow-hidden rounded-3xl">
       <img
@@ -12,7 +12,7 @@ function TechnicsItem({ image, description, id }) {
       />
       <div className="flex flex-col justify-between flex-1 p-10 text-white bg-darken">
         <Link to={`/products/${id}`} className="flex items-center">
-          <span className="mr-2 text-lg font-semibold md:text-4xl">Трактора</span>{" "}
+          <span className="mr-2 text-lg font-semibold md:text-4xl">{title}</span>{" "}
           <img
             className="w-auto h-6"
             src="/images/Arrow-white.svg"
