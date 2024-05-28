@@ -2,8 +2,29 @@ import Button from "./Button";
 import ProductCard from "./ProductCard";
 import ProductsGrid from "./ProductsGrid";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import {useEffect, useState} from "react";
+import {getRandomProducts} from "../services/productService";
+import {BASE_URL} from "../config";
 
 function ProductsMain() {
+  const [otherProducts, setOtherProducts] = useState([]);
+
+  useEffect(() => {
+        const fetchOtherProducts = async () => {
+            try {
+                const response = await getRandomProducts();
+                console.log(response);
+                setOtherProducts(response);
+            } catch (error) {
+                if (error.response && error.response.status === 404) {
+                    console.log(error)
+
+                }
+            }
+        };
+        fetchOtherProducts();
+    }, []);
+
   return (
     <div className="mt-36">
       <div className="flex flex-col items-center mx-auto lg:items-start lg:justify-between lg:flex-row ">
@@ -26,43 +47,55 @@ function ProductsMain() {
         </Button>
       </div>
       <ProductsGrid>
-        <ProductCard
-          id={1}
-          image="/images/tractor-2.jpg"
-          name="Трактор UX1"
-          price="12 000 000"
-          year={2024}
-          power={900}
-          country="Испания"
-        />
-        <ProductCard
-          id={2}
-          image="/images/tractor-3.jpg"
-          name="Трактор HWW9"
-          price="12 000 000"
-          year={2024}
-          power={900}
-          country="Испания"
-        />
-        <ProductCard
-          id={3}
-          image="/images/tractor-4.jpg"
-          name="Трактор XCMG 1"
-          price="12 000 000"
-          year={2024}
-          power={900}
-          country="Испания"
-        />
-        <ProductCard
-          id={4}
-          image="/images/tractor-main-1.jpg"
-          name="Трактор UX92"
-          price="12 000 000"
-          year={2024}
-          power={900}
-          country="Испания"
-        />
-      </ProductsGrid>
+                            {otherProducts.map((model, index) => (
+                                <ProductCard
+                                    key={index}
+                                    id={model.id}
+                                    image={model.images.length > 0 ? model.images[0].image.replace("/media", `${BASE_URL}/media`) : null}
+                                    name={model.name}
+                                    price={model.price}
+                                    attributes={model.attributes}
+                                />
+                            ))}
+                        </ProductsGrid>
+      {/*<ProductsGrid>*/}
+      {/*  <ProductCard*/}
+      {/*    id={1}*/}
+      {/*    image="/images/tractor-2.jpg"*/}
+      {/*    name="Трактор UX1"*/}
+      {/*    price="12 000 000"*/}
+      {/*    year={2024}*/}
+      {/*    power={900}*/}
+      {/*    country="Испания"*/}
+      {/*  />*/}
+      {/*  <ProductCard*/}
+      {/*    id={2}*/}
+      {/*    image="/images/tractor-3.jpg"*/}
+      {/*    name="Трактор HWW9"*/}
+      {/*    price="12 000 000"*/}
+      {/*    year={2024}*/}
+      {/*    power={900}*/}
+      {/*    country="Испания"*/}
+      {/*  />*/}
+      {/*  <ProductCard*/}
+      {/*    id={3}*/}
+      {/*    image="/images/tractor-4.jpg"*/}
+      {/*    name="Трактор XCMG 1"*/}
+      {/*    price="12 000 000"*/}
+      {/*    year={2024}*/}
+      {/*    power={900}*/}
+      {/*    country="Испания"*/}
+      {/*  />*/}
+      {/*  <ProductCard*/}
+      {/*    id={4}*/}
+      {/*    image="/images/tractor-main-1.jpg"*/}
+      {/*    name="Трактор UX92"*/}
+      {/*    price="12 000 000"*/}
+      {/*    year={2024}*/}
+      {/*    power={900}*/}
+      {/*    country="Испания"*/}
+      {/*  />*/}
+      {/*</ProductsGrid>*/}
     </div>
   );
 }
