@@ -2,7 +2,7 @@ import InfoBlock from "./InfoBlock";
 
 function AdditionalInfo() {
   return (
-    <div className="grid grid-cols-1 gap-10 mt-32 lg:grid-cols-2">
+    <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
       <InfoBlock image="/images/tractor-main-1.jpg">
         <div className="w-10/12 text-white">
           <h4 className="mb-2 text-2xl font-semibold md:text-4xl ">
