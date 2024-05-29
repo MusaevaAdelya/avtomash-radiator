@@ -35,32 +35,32 @@ function ProductListPage() {
         categories &&
         !isCategoriesLoading &&
         !isCategoriesError && (
-          <div className="bg-white lg:p-4 product-list">
-            <div className="flex flex-col items-center justify-center lg:p-5 product-list-header">
-              <h1 className="text-3xl font-semibold text-gray-800 lg:text-6xl md:text-4xl">
+          <div className="flex flex-col lg:p-4">
+            <div className="flex flex-col items-center justify-center lg:p-5">
+              <h1 className="text-4xl font-semibold lg:text-6xl md:text-5xl">
                 Продукция
               </h1>
-              <p className="mt-4 font-semibold text-gray-600 max-w-[641px] text-center">
+              <p className="mt-4 font-medium  max-w-[641px] text-center md:text-lg text-base">
                 Компания с многолетним опытом поставок специальной и
                 сельскохозяйственной техники. Самый широкий ассортимент
                 представленный на рынке Кыргызстана известных международных
                 брендов.
               </p>
-              <div className="flex flex-col justify-center gap-2 mt-5 product-list-buttons md:flex-row">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    className={`px-6 py-2 ${
-                      selectedCategory === category.id
-                        ? "bg-primary text-white"
-                        : "text-dark-200"
-                    }  font-medium cursor-pointer rounded-3xl`}
-                    onClick={() => setSelectedCategory(category.id)}
-                  >
-                    {category.name}
-                  </button>
-                ))}
-              </div>
+            </div>
+            <div className="inline-flex flex-col items-center justify-center gap-2 mt-6 mb-16 lg:flex lg:flex-row">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  className={`px-6 py-2 ${
+                    selectedCategory === category.id
+                      ? "bg-primary text-white"
+                      : "text-dark-200 "
+                  }  font-medium cursor-pointer rounded-3xl !inline-block`}
+                  onClick={() => setSelectedCategory(category.id)}
+                >
+                  {category.name}
+                </button>
+              ))}
             </div>
             <div className="flex flex-wrap justify-center -mx-4">
               {products.map((product) => (
