@@ -67,10 +67,10 @@ function ProductCard({
           })}
       </div>
       <Button
-        styleClasses="mt-3 py-3 px-5 border border-primary border-2 text-xl text-dark-400 font-medium rounded-full hover:bg-primary hover:text-white transition ease-in-out duration-200 "
-        isLink={false}
-        onClickHandler={handleClick}
-        // to={`/products/${id}`}
+        styleClasses="mt-3 py-3 px-5 border border-primary border-2 text-xl text-dark-400 font-medium rounded-full hover:bg-primary hover:text-white transition ease-in-out duration-200 text-center"
+        isLink={true}
+        // onClickHandler={handleClick}
+        to={`/products/${id}`}
       >
         <span>Узнать подробнее</span>
       </Button>
