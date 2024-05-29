@@ -2,7 +2,7 @@ import Button from "./Button";
 import ProductCard from "./ProductCard";
 import ProductsGrid from "./ProductsGrid";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
-
+import CardSkeletonGroup from "./CardSkeletonGroup";
 import { BASE_URL } from "../config";
 import useFetchRandomProducts from "../hooks/useFetchRandomProducts";
 
@@ -11,9 +11,9 @@ function ProductsMain() {
 
   return (
     <>
-      {otherProducts && !isLoading && !isError && (
+      {!isError && (
         <div className="my-36">
-          <div className="flex flex-col items-center mx-auto lg:items-start lg:justify-between lg:flex-row ">
+          <div className="flex flex-col items-center mx-auto mb-5 lg:items-start lg:justify-between lg:flex-row">
             <div className="text-center lg:text-start">
               <h2 className="mb-3 text-3xl font-semibold md:text-5xl text-dark-400">
                 Продукты
@@ -32,25 +32,29 @@ function ProductsMain() {
               <ChevronRightIcon className="w-6 h-6" aria-hidden="true" />
             </Button>
           </div>
-          <ProductsGrid>
-            {otherProducts.map((model, index) => (
-              <ProductCard
-                key={index}
-                id={model.id}
-                image={
-                  model.images.length > 0
-                    ? model.images[0].image.replace(
-                        "/media",
-                        `${BASE_URL}/media`
-                      )
-                    : null
-                }
-                name={model.name}
-                price={model.price}
-                attributes={model.attributes}
-              />
-            ))}
-          </ProductsGrid>
+          {isLoading ? (
+            <CardSkeletonGroup />
+          ) : (
+            <ProductsGrid>
+              {otherProducts?.map((model, index) => (
+                <ProductCard
+                  key={index}
+                  id={model.id}
+                  image={
+                    model.images.length > 0
+                      ? model.images[0].image.replace(
+                          "/media",
+                          `${BASE_URL}/media`
+                        )
+                      : null
+                  }
+                  name={model.name}
+                  price={model.price}
+                  attributes={model.attributes}
+                />
+              ))}
+            </ProductsGrid>
+          )}
         </div>
       )}
 
@@ -72,7 +76,8 @@ function ProductsMain() {
             ></path>
           </svg>
           <div>
-            <span class="font-medium">Error occurred!</span> Failed fetching product information from the server
+            <span class="font-medium">Error occurred!</span> Failed fetching
+            product information from the server
           </div>
         </div>
       )}

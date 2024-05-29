@@ -15,7 +15,7 @@ function HeroInfoBlock() {
         <Button isLink={true} to={"/products"} styleClasses=" py-2.5 px-8 bg-primary text-sm md:text-base lg:text-lg text-white font-medium rounded-full flex items-center justify-center">
           Купить
         </Button>
-        <Button isLink={true} to={"/products"} styleClasses="flex items-center rounded-full py-2.5 px-4 md:px-8 text-dark-100 font-medium border border-dark-100 justify-center ">
+        <Button isLink={true} to={"/products"} styleClasses="flex items-center rounded-full py-2.5 px-4 md:px-8 text-dark-100 font-medium border border-dark-100 justify-center">
           <span className="mr-1 text-sm md:text-base lg:text-lg md:mr-2">Узнать подробнее</span>
           <img className="w-2.5 h-4" src="images/Arrow.svg" alt="arrow" />
         </Button>

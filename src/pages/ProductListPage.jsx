@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Button from "../components/Button";
 import { BASE_URL } from "../config";
-import ProductCharacteristics from "../components/ProductCharacteristics";
 import useFetchCategories from "../hooks/useFetchCategories";
 import { Navigate } from "react-router-dom";
 import useFetchProducts from "../hooks/useFetchProducts";
 import CardSkeletonGroup from "../components/CardSkeletonGroup";
+import ProductCard from "../components/ProductCard";
+import ProductsGrid from "../components/ProductsGrid";
 
 function ProductListPage() {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -21,7 +21,7 @@ function ProductListPage() {
   return (
     <>
       {
-        <div className="flex flex-col lg:p-4">
+        <div className="flex flex-col mb-10 md:mb-24 lg:p-4">
           <div className="flex flex-col items-center justify-center lg:p-5">
             <h1 className="text-4xl font-semibold lg:text-6xl md:text-5xl">
               Продукция
@@ -34,7 +34,7 @@ function ProductListPage() {
             </p>
           </div>
           {!isCategoriesLoading && (
-            <div className="inline-flex flex-col items-center justify-center gap-2 mt-6 mb-16 lg:flex lg:flex-row">
+            <div className="inline-flex flex-col items-center justify-center gap-2 mt-6 mb-10 md:mb-16 lg:flex lg:flex-row">
               {categories?.map((category) => (
                 <button
                   key={category.id}
@@ -54,70 +54,22 @@ function ProductListPage() {
             <CardSkeletonGroup />
           ) : (
             <>
-              <div className="flex flex-wrap justify-center -mx-4">
+              <ProductsGrid>
                 {products?.map((product) => (
-                  <div
+                  <ProductCard
                     key={product.id}
-                    className="w-full p-4 md:w-1/2 lg:w-1/4"
-                  >
-                    <div className="flex flex-col h-full overflow-hidden bg-white border-2 border-gray-200 rounded-lg shadow-lg">
-                      <img
-                        className="object-cover w-full h-48"
-                        src={
-                          product.images.length > 0
-                            ? `${BASE_URL}${product.images[0].image}`
-                            : "/images/placeholder.jpg"
-                        }
-                        alt={product.name}
-                      />
-                      <div className="flex flex-col flex-grow p-6">
-                        <h2 className="text-lg font-bold text-gray-900 truncate">
-                          {product.name}
-                        </h2>
-                        <div className="flex-grow">
-                          {product.year && (
-                            <ProductCharacteristics
-                              icon="/images/calendar-icon.svg"
-                              text={`Год выпуска: ${product.year}`}
-                            />
-                          )}
-                          {product.power && (
-                            <ProductCharacteristics
-                              icon="/images/power-icon.svg"
-                              text={`Мощность: ${product.power} л.с.`}
-                            />
-                          )}
-                          {product.country && (
-                            <ProductCharacteristics
-                              icon="/images/country-icon.svg"
-                              text={`Страна: ${product.country}`}
-                            />
-                          )}
-                          {!product.year &&
-                            !product.power &&
-                            !product.country &&
-                            product.attributes
-                              .slice(0, 3)
-                              .map((attr, index) => (
-                                <ProductCharacteristics
-                                  key={index}
-                                  icon="/images/power-icon.svg"
-                                  text={`${attr.key}: ${attr.value}`}
-                                />
-                              ))}
-                        </div>
-                        <Button
-                          styleClasses="mt-auto w-18 py-1 px-9 border border-primary border-2 text-l text-dark-400 font-medium rounded-full hover:bg-primary hover:text-white transition duration-200"
-                          isLink={true}
-                          to={`/products/${product.id}`}
-                        >
-                          <span>Узнать подробнее</span>
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
+                    id={product.id}
+                    image={
+                      product.images.length > 0
+                        ? `${BASE_URL}${product.images[0].image}`
+                        : "/images/placeholder.jpg"
+                    }
+                    name={product.name}
+                    price={product.price}
+                    attributes={product.attributes}
+                  />
                 ))}
-              </div>
+              </ProductsGrid>
             </>
           )}
         </div>
