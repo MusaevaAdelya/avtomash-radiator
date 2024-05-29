@@ -36,11 +36,11 @@ function ProductListPage() {
         !isCategoriesLoading &&
         !isCategoriesError && (
           <div className="bg-white lg:p-4 product-list">
-            <div className="text-center lg:p-5 product-list-header">
+            <div className="flex flex-col items-center justify-center lg:p-5 product-list-header">
               <h1 className="text-3xl font-semibold text-gray-800 lg:text-6xl md:text-4xl">
                 Продукция
               </h1>
-              <p className="mt-4 font-semibold text-gray-600 ">
+              <p className="mt-4 font-semibold text-gray-600 max-w-[641px] text-center">
                 Компания с многолетним опытом поставок специальной и
                 сельскохозяйственной техники. Самый широкий ассортимент
                 представленный на рынке Кыргызстана известных международных
@@ -50,11 +50,11 @@ function ProductListPage() {
                 {categories.map((category) => (
                   <button
                     key={category.id}
-                    className={`px-6 py-3 ${
+                    className={`px-6 py-2 ${
                       selectedCategory === category.id
-                        ? "bg-red-600"
-                        : "bg-gray-300"
-                    } text-white font-semibold cursor-pointer transition-colors duration-300 hover:bg-red-700 rounded-3xl`}
+                        ? "bg-primary text-white"
+                        : "text-dark-200"
+                    }  font-medium cursor-pointer rounded-3xl`}
                     onClick={() => setSelectedCategory(category.id)}
                   >
                     {category.name}
