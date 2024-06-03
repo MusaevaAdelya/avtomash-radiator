@@ -14,11 +14,11 @@ function Technologies() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-14 mt-14">
-          <TechnologyItem image="/images/tech-item-1.svg" title="Фишка 1" subtitle="Повышение эстетического качества и пользовательской привлекательности."/>
-          <TechnologyItem image="/images/tech-item-2.svg" title="Фишка 2" subtitle="Интеграция нюансов, которые улучшают общую пользовательскую.."/>
-          <TechnologyItem image="/images/tech-item-3.svg" title="Фишка 3" subtitle="Повышение общего качества 
+          <TechnologyItem image="/images/tech-item-1.svg" title="Özduman" subtitle="Повышение эстетического качества и пользовательской привлекательности."/>
+          <TechnologyItem image="/images/tech-item-2.svg" title="FM WORLD" subtitle="Интеграция нюансов, которые улучшают общую пользовательскую.."/>
+          <TechnologyItem image="/images/tech-item-3.svg" title="Ğokmenler" subtitle="Повышение общего качества
 визуального представления продукта.."/>
-          <TechnologyItem image="/images/tech-item-4.svg" title="Фишка 4" subtitle="Внедрение дополнительных элементов для улучшения общего восприятия.."/>
+          <TechnologyItem image="/images/tech-item-4.svg" title="Saka" subtitle="Внедрение дополнительных элементов для улучшения общего восприятия.."/>
         </div>
       </div>
 
