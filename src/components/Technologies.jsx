@@ -6,7 +6,7 @@ function Technologies() {
       <div className="">
         <div className="space-y-2">
           <h2 className="font-semibold text-dark-400 text-2xl md:text-[40px] lg:leading-10">
-            Передовые технологии для какого-то дела и так далее
+            Наше преимущество — наши зарубежные партнёры
           </h2>
           {/*<p className="w-full text-base font-medium lg:w-4/5 md:text-lg text-dark-200">*/}
           {/*  Ну кароче речь о том хорошо типо и так далее и все хорошо ну вроде*/}

@@ -20,7 +20,7 @@ function TechnicsItem({ image, title,description, id }) {
           />
         </Link>
         <div className="flex justify-between">
-          <p className="max-w-[293px]">{description}</p>
+          <p className="max-w-[293px] text-xl">{description}</p>
           <Button styleClasses="mr-4  px-8 border border-white text-xl text-white font-medium rounded-full md:flex items-center hidden hover:bg-primary hover:border-primary transition ease-in-out duration-200 self-center py-2.5" isLink={true} to={`/products/${id}`}>
             <span className="mr-2">Узнать подробнее</span>
             <ChevronRightIcon className="w-auto h-8" aria-hidden="true"/>

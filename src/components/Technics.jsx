@@ -14,19 +14,19 @@ function Technics() {
         <TechnicsItem
           image="/images/technics-1.jpg"
           title="Трактора"
-          description="Великобрита́ния (русское название происходит от англ. Great Britain), или Соединённое"
+          description="Наши трактора обеспечивают надежность и высокую производительность для любых сельскохозяйственных задач."
           id="1"
         />
         <TechnicsItem
           image="/images/technics-2.jpg"
           title="Сеялки"
-          description="Великобрита́ния (русское название происходит от англ. Great Britain), или Соединённое"
+          description="Современные сеялки для точного посева и высокой урожайности."
           id="2"
         />
         <TechnicsItem
           image="/images/technics-3.jpg"
-          title="Трактора"
-          description="Великобрита́ния (русское название происходит от англ. Great Britain), или Соединённое"
+          title="Агрегаты"
+          description="Надежные агрегаты для обработки почвы и повышения производительности."
           id="3"
         />
       </div>
