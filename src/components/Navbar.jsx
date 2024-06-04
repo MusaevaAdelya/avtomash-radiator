@@ -20,7 +20,7 @@ export default function Navbar() {
       >
         <div className="flex ">
           <NavLink to="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
+            <span className="sr-only">JSK BASHAT</span>
             <img className="w-auto h-16" src="/images/logo_1.jpg" alt="Logo" />
           </NavLink>
         </div>
@@ -46,6 +46,12 @@ export default function Navbar() {
             className="text-lg font-semibold leading-6 text-gray-900"
           >
             Продукты
+          </NavLink>
+          <NavLink
+            to="/cases"
+            className="text-lg font-semibold leading-6 text-gray-900"
+          >
+            Наши кейсы
           </NavLink>
         </Popover.Group>
         <div className="hidden lg:flex lg:justify-end lg:items-center ">

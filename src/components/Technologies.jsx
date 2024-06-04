@@ -8,17 +8,21 @@ function Technologies() {
           <h2 className="font-semibold text-dark-400 text-2xl md:text-[40px] lg:leading-10">
             Передовые технологии для какого-то дела и так далее
           </h2>
-          <p className="w-full text-base font-medium lg:w-4/5 md:text-lg text-dark-200">
-            Ну кароче речь о том хорошо типо и так далее и все хорошо ну вроде
-            все норм.
-          </p>
+          {/*<p className="w-full text-base font-medium lg:w-4/5 md:text-lg text-dark-200">*/}
+          {/*  Ну кароче речь о том хорошо типо и так далее и все хорошо ну вроде*/}
+          {/*  все норм.*/}
+          {/*</p>*/}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-14 mt-14">
-          <TechnologyItem image="/images/tech-item-1.svg" title="Özduman" subtitle="Повышение эстетического качества и пользовательской привлекательности."/>
-          <TechnologyItem image="/images/tech-item-2.svg" title="FM WORLD" subtitle="Интеграция нюансов, которые улучшают общую пользовательскую.."/>
-          <TechnologyItem image="/images/tech-item-3.svg" title="Ğokmenler" subtitle="Повышение общего качества
-визуального представления продукта.."/>
-          <TechnologyItem image="/images/tech-item-4.svg" title="Saka" subtitle="Внедрение дополнительных элементов для улучшения общего восприятия.."/>
+          <TechnologyItem image="/images/tech-item-1.svg" title="Özduman"/>
+          <TechnologyItem image="/images/tech-item-2.svg" title="FM WORLD"/>
+          <TechnologyItem image="/images/tech-item-3.svg" title="Ğokmenler" />
+          <TechnologyItem image="/images/tech-item-4.svg" title="Saka"/>
+          <TechnologyItem image="/images/tech-item-1.svg" title="Orion Agrees"/>
+          <TechnologyItem image="/images/tech-item-2.svg" title="TURAN"/>
+          <TechnologyItem image="/images/tech-item-3.svg" title="HAIDAN TARIM" />
+          <TechnologyItem image="/images/tech-item-4.svg" title="Агор Крым"/>
+          <TechnologyItem image="/images/tech-item-4.svg" title="Кронос"/>
         </div>
       </div>
 

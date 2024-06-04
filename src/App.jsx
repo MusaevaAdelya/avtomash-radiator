@@ -5,6 +5,7 @@ import ProductPage from "./pages/ProductPage";
 import PageNotFound from "./pages/PageNotFound";
 import AppLayout from "./layout/AppLayout";
 import FailPage from "./pages/FailPage";
+import CasesPage from "./pages/CasesPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="products" element={<ProductListPage />} />
           <Route path="products/:id" element={<ProductPage />} />
+          <Route path="cases" element={<CasesPage />} />
           <Route path="fail" element={<FailPage/>}/>
           <Route path="*" element={<PageNotFound />} />
         </Route>
