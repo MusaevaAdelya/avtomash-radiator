@@ -6,8 +6,8 @@ function HeroImage() {
             <div className="h-[473px] md:h-[587px] overflow-hidden relative rounded-3xl ">
                 <img className="absolute object-cover w-full h-full transform -translate-x-1/2 -translate-y-1/2 -z-10 top top-1/2 left-1/2" src="https://static.tildacdn.com/tild6237-3763-4431-b033-323663623636/tour_colombia_moscow.jpg" alt="tractor" />
                 <div className="flex flex-col justify-end w-full h-full p-10 text-white bg-darken">
-                    <p className="">Профессиональный трактор</p>
-                    <h3 className="text-2xl font-semibold">John Deere E14</h3>
+                    {/* <p className="">Профессиональный трактор</p>
+                    <h3 className="text-2xl font-semibold">John Deere E14</h3> */}
                 </div>
             </div>
         </Link>
