@@ -1,6 +1,6 @@
 function InfoBlock({ children, image }) {
   return (
-    <div className="min-h-[588px] rounded-3xl relative overflow-hidden">
+    <div className="h-[588px] relative overflow-hidden  rounded-3xl ">
       <img
         src={image}
         alt="tractor"

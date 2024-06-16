@@ -13,7 +13,7 @@ function Technologies() {
           {/*  все норм.*/}
           {/*</p>*/}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 mt-14">
+        <div className="grid items-center justify-center grid-cols-3 gap-14 mt-14">
           <TechnologyItem image="/images/tech-item-1.svg" title="Özduman"/>
           <TechnologyItem image="/images/tech-item-2.svg" title="FM WORLD"/>
           <TechnologyItem image="/images/tech-item-3.svg" title="Ğokmenler" />

@@ -55,10 +55,10 @@ export default function Navbar() {
           </NavLink>
         </Popover.Group>
         <div className="hidden lg:flex lg:justify-end lg:items-center ">
-          <Link to="#" className="mr-2">
+          <Link to="https://wa.me/996550418181" className="mr-2" target="_blank">
             <img src="/images/Whatsapp.svg" alt="whatsapp icon" />
           </Link>
-          <Link to="#">
+          <Link to="https://www.instagram.com/jskbashat?igsh=MXh0czJ6cDA3NTc0Yg==" target="_blank">
             <img src="/images/Instagram.svg" alt="instagram icon" />
           </Link>
           <p className="h-5 mx-2 border-r border-gray-300"></p>
@@ -117,10 +117,10 @@ export default function Navbar() {
               </div>
               <div className="py-6 space-y-4">
                 <div className="flex items-center">
-                  <Link to="#" className="mr-3">
+                  <Link to="https://wa.me/996550418181" target="_blank" className="mr-3">
                     <img src="/images/whatsapp-black.svg" alt="whatsapp icon" />
                   </Link>
-                  <Link to="#">
+                  <Link to="https://www.instagram.com/jskbashat?igsh=MXh0czJ6cDA3NTc0Yg==" target="_blank">
                     <img
                       src="/images/instagram-black.svg"
                       alt="instagram icon"
