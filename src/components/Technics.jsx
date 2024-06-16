@@ -3,7 +3,7 @@ import TechnicsItem from "./TechnicsItem";
 function Technics() {
   return (
     <div>
-      <div className="font-medium text-center max-w-[643px] mx-auto mt-20 mb-10">
+      <div className="font-medium text-center max-w-[643px] mx-auto mt-24 mb-10">
         <h2 className="mb-2 text-5xl text-dark-400">Техника</h2>
         <p className="text-lg text-dark-200">
           Самый широкий ассортимент представленный на рынке Кыргызстана
