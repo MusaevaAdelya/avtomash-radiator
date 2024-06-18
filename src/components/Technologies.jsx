@@ -8,10 +8,10 @@ function Technologies() {
           <h2 className="font-semibold text-dark-400 text-2xl md:text-[40px] lg:leading-10">
             Наше преимущество — наши зарубежные партнёры
           </h2>
-          {/*<p className="w-full text-base font-medium lg:w-4/5 md:text-lg text-dark-200">*/}
-          {/*  Ну кароче речь о том хорошо типо и так далее и все хорошо ну вроде*/}
-          {/*  все норм.*/}
-          {/*</p>*/}
+          {/* <p className="w-full text-base font-medium lg:w-4/5 md:text-lg text-dark-200">
+           Ну кароче речь о том хорошо типо и так далее и все хорошо ну вроде
+           все норм.
+          </p> */}
         </div>
         <div className="grid items-center justify-center grid-cols-3 gap-14 mt-14">
           <TechnologyItem image="/images/tech-item-1.svg" title="Özduman"/>
@@ -29,7 +29,7 @@ function Technologies() {
       <div className="min-h-[330px] grow flex overflow-hidden relative rounded-3xl w-full lg:w-[605px] ">
         <img
           className="absolute object-cover w-full h-full transform -translate-x-1/2 -translate-y-1/2 -z-10 top top-1/2 left-1/2"
-          src="/images/company-pic-3.jpg"
+          src="/images/company-pic-1.jpg"
           alt="tractor"
         />
         <div className="flex flex-col justify-end w-full p-10 text-white bg-darken">
