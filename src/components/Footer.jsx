@@ -14,10 +14,10 @@ function Footer() {
         </div>
         <div className="flex gap-3">
           <Link to="https://wa.me/996550418181" target="_blank">
-            <img src="/images/whatsapp-white.svg" alt="whatsapp icon" className="w-auto h-auto lg:h-20 lg:w-20" />
+            <img src="/images/whatsapp-white.svg" alt="whatsapp icon" className="w-auto h-auto lg:w-20" />
           </Link>
           <Link to="https://www.instagram.com/jskbashat?igsh=MXh0czJ6cDA3NTc0Yg==" target="_blank">
-            <img src="/images/instagram-white.svg" alt="instagram icon"  className="w-auto h-auto lg:h-20 lg:w-20"/>
+            <img src="/images/instagram-white.svg" alt="instagram icon"  className="w-auto h-auto lg:w-20"/>
           </Link>
         </div>
       </div>
