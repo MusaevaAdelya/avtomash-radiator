@@ -48,6 +48,12 @@ export default function Navbar() {
             Продукты
           </NavLink>
           <NavLink
+            to="/about-us"
+            className="text-lg font-semibold leading-6 text-gray-900"
+          >
+            О нас
+          </NavLink>
+          <NavLink
             to="/cases"
             className="text-lg font-semibold leading-6 text-gray-900"
           >
@@ -113,6 +119,20 @@ export default function Navbar() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Продукты
+                </NavLink>
+                <NavLink
+                  to="/about-us"
+                  className="block px-3 py-2 -mx-3 font-medium leading-7 rounded-lg text-dark-400 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  О нас
+                </NavLink>
+                <NavLink
+                  to="/cases"
+                  className="block px-3 py-2 -mx-3 font-medium leading-7 rounded-lg text-dark-400 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Наши кейсы
                 </NavLink>
               </div>
               <div className="py-6 space-y-4">
