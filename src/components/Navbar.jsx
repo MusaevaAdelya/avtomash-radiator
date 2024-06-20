@@ -48,6 +48,12 @@ export default function Navbar() {
             Продукты
           </NavLink>
           <NavLink
+            to="/about-us"
+            className="text-lg font-semibold leading-6 text-gray-900"
+          >
+            О нас
+          </NavLink>
+          <NavLink
             to="/cases"
             className="text-lg font-semibold leading-6 text-gray-900"
           >
@@ -55,10 +61,10 @@ export default function Navbar() {
           </NavLink>
         </Popover.Group>
         <div className="hidden lg:flex lg:justify-end lg:items-center ">
-          <Link to="#" className="mr-2">
+          <Link to="https://wa.me/996550418181" className="mr-2" target="_blank">
             <img src="/images/Whatsapp.svg" alt="whatsapp icon" />
           </Link>
-          <Link to="#">
+          <Link to="https://www.instagram.com/jskbashat?igsh=MXh0czJ6cDA3NTc0Yg==" target="_blank">
             <img src="/images/Instagram.svg" alt="instagram icon" />
           </Link>
           <p className="h-5 mx-2 border-r border-gray-300"></p>
@@ -114,13 +120,27 @@ export default function Navbar() {
                 >
                   Продукты
                 </NavLink>
+                <NavLink
+                  to="/about-us"
+                  className="block px-3 py-2 -mx-3 font-medium leading-7 rounded-lg text-dark-400 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  О нас
+                </NavLink>
+                <NavLink
+                  to="/cases"
+                  className="block px-3 py-2 -mx-3 font-medium leading-7 rounded-lg text-dark-400 hover:bg-gray-50"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Наши кейсы
+                </NavLink>
               </div>
               <div className="py-6 space-y-4">
                 <div className="flex items-center">
-                  <Link to="#" className="mr-3">
+                  <Link to="https://wa.me/996550418181" target="_blank" className="mr-3">
                     <img src="/images/whatsapp-black.svg" alt="whatsapp icon" />
                   </Link>
-                  <Link to="#">
+                  <Link to="https://www.instagram.com/jskbashat?igsh=MXh0czJ6cDA3NTc0Yg==" target="_blank">
                     <img
                       src="/images/instagram-black.svg"
                       alt="instagram icon"
