@@ -7,6 +7,8 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+
+
 export default function Carousel({ images }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
