@@ -18,10 +18,10 @@ function ProductsMain() {
               <h2 className="mb-3 text-3xl font-semibold md:text-5xl text-dark-400">
                 Продукты
               </h2>
-              <p className="text-base md:text-2xl font-medium text-dark-200 max-w-[320px] md:max-w-[643px]">
-                Ну кароче речь о том хорошо типо и так далее и все хорошо ну
-                вроде все норм.
-              </p>
+              {/*<p className="text-base md:text-2xl font-medium text-dark-200 max-w-[320px] md:max-w-[643px]">*/}
+              {/*  Ну кароче речь о том хорошо типо и так далее и все хорошо ну*/}
+              {/*  вроде все норм.*/}
+              {/*</p>*/}
             </div>
             <Button
               styleClasses="mr-4 py-2.5 px-8 border border-dark-200 text-base md:text-xl text-dark-200 font-medium lg:rounded-full rounded-md flex items-center hover:bg-primary hover:border-primary hover:text-white transition ease-in-out duration-200 lg:self-center mt-5 lg:mt-0"

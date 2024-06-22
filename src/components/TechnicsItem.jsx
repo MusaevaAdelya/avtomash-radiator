@@ -11,7 +11,7 @@ function TechnicsItem({ image, title,description, id }) {
         className="absolute object-cover w-full h-full transform -translate-x-1/2 -translate-y-1/2 -z-10 top-1/2 left-1/2"
       />
       <div className="flex flex-col justify-between flex-1 p-10 text-white bg-darken">
-        <Link to={`/products/${id}`} className="flex items-center">
+        <Link to={`/products/`} className="flex items-center">
           <span className="mr-2 text-lg font-semibold md:text-4xl">{title}</span>{" "}
           <img
             className="w-auto h-6"

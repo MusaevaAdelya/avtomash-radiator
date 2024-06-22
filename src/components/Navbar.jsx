@@ -149,10 +149,10 @@ export default function Navbar() {
                   <p className="mx-3 border-r border-black h-7"></p>
                   <span className="text-lg font-medium text-dark-400">
                     <a
-                      href="tel:+996997919170"
+                      href="tel:+99670618182"
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
-                      +996 (997) 91-91-70
+                      +996 (706) 818-182
                     </a>
                   </span>
                 </div>

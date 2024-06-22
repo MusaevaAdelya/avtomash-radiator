@@ -6,7 +6,7 @@ function Footer() {
       <div className="mx-auto flex container items-start justify-between p-6 md:px-8 lg:max-w-[83rem] text-dark-200 font-medium gap-8 lg:gap-36 lg:flex-row flex-col">
         <img className="w-auto h-20" src="/images/logo_1.jpg" alt="Logo" />
         <p className="text-xl">
-          Мы предоставляем широкий ассортимент сельскохозяйственной техники в
+          ЖСК Башат предоставляет широкий ассортимент сельскохозяйственной техники в
           лизинг и даем гарантию на продукцию на один год.
         </p>
         <div>
